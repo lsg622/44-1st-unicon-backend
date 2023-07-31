@@ -37,7 +37,7 @@ const signIn = async (email, password) => {
   const jwtToken = jwt.sign(payLoad, process.env.SECRET_KEY, {
     expiresIn: '1d',
   });
-  
+
   return { names: users.names, Token: jwtToken };
 };
 const getUserById = async (id) => {
